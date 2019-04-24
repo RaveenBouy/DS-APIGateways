@@ -1,0 +1,223 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/login/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/login/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/login/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/login/",
+      "UpstreamHttpMethod": [ "Get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/register/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/register/",
+      "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/register/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/register/",
+      "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/advertisement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/ad/advertisement",
+      "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/advertisement",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/ad/advertisement",
+      "UpstreamHttpMethod": [ "post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewPostById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/ad/viewPostById/{id}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewPostById/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/ad/viewPostById/{id}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/api/ad/viewAdverts/",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/api/ad/viewAdverts/{searchCondition}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/api/ad/viewAdverts/{searchCondition}/{sortCondition}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}/{location}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8888
+        }
+      ],
+      "UpstreamPathTemplate": "/api1/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}/{location}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/api/ad/viewAdverts/",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/api/ad/viewAdverts/{searchCondition}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/api/ad/viewAdverts/{searchCondition}/{sortCondition}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}",
+      "UpstreamHttpMethod": [ "get" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}/{location}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7777
+        }
+      ],
+      "UpstreamPathTemplate": "/api2/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}/{location}",
+      "UpstreamHttpMethod": [ "get" ]
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:20000"
+  }
+}
