@@ -11,6 +11,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using NLog.Extensions.Logging;
+using Ocelot.DependencyInjection;
+using Ocelot.Provider.Consul;
+using Ocelot.Provider.Polly;
 
 namespace APIGateWay1
 {
@@ -27,10 +31,15 @@ namespace APIGateWay1
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services
+                .AddOcelot()
+                .AddPolly()
+                .AddConsul();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        [Obsolete]
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             if (env.IsDevelopment())
             {
@@ -41,6 +50,12 @@ namespace APIGateWay1
                 app.UseHsts();
             }
 
+            //console logging
+            loggerFactory.AddConsole(Configuration.GetSection("Logging"));
+
+            //nlog logging
+            loggerFactory.AddNLog();
+            loggerFactory.ConfigureNLog("nlog.config");
             app.UseMvc();
         }
     }
