@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using Ocelot.Middleware;
 using Ocelot.DependencyInjection;
+using NLog.Web;
 
 namespace APIGateWay1
 {
@@ -19,6 +20,7 @@ namespace APIGateWay1
             BuildWebHost(args).Run();
         }
 
+        [Obsolete]
         public static IWebHost BuildWebHost(string[] args)
         {
             return WebHost.CreateDefaultBuilder(args)
@@ -38,7 +40,9 @@ namespace APIGateWay1
                           })
                           .ConfigureLogging((hostingContext, logging) =>
                           {
-                              //add your logging
+                              logging.AddConfiguration(hostingContext.Configuration.GetSection("Logging"));
+                              logging.ConfigureNLog("nlog.config").GetCurrentClassLogger();
+                              logging.AddConsole();
                           })
                           .UseIISIntegration()
                           .Build();
