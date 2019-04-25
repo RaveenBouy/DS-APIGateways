@@ -19,9 +19,8 @@
       "UpstreamPathTemplate": "/api/login/",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
-      },
-      "UpstreamHttpMethod": [ "Get" ]
+        "Type": "RoundRobin"
+      }
     },
     {
       "DownstreamPathTemplate": "/api/register/",
@@ -37,9 +36,9 @@
         }
       ],
       "UpstreamPathTemplate": "/api/register/",
-      "FileCacheOptions": { "TtlSeconds": 20 },
+      "FileCacheOptions": { "TtlSeconds": 2 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "post" ]
     },
@@ -57,9 +56,9 @@
         }
       ],
       "UpstreamPathTemplate": "/api/ad/advertisement",
-      "FileCacheOptions": { "TtlSeconds": 20 },
+      "FileCacheOptions": { "TtlSeconds": 2 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "post" ]
     },
@@ -79,7 +78,7 @@
       "UpstreamPathTemplate": "/api/ad/viewPostById/{id}",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     },
@@ -99,7 +98,7 @@
       "UpstreamPathTemplate": "/api/ad/viewAdverts/",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     },
@@ -119,7 +118,7 @@
       "UpstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     },
@@ -139,7 +138,7 @@
       "UpstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     },
@@ -159,7 +158,7 @@
       "UpstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     },
@@ -179,7 +178,7 @@
       "UpstreamPathTemplate": "/api/ad/viewAdverts/{searchCondition}/{sortCondition}/{sortDirection}/{location}",
       "FileCacheOptions": { "TtlSeconds": 20 },
       "LoadBalancerOptions": {
-        "Type": "LeastConnect"
+        "Type": "RoundRobin"
       },
       "UpstreamHttpMethod": [ "get" ]
     }
